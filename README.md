@@ -1,5 +1,6 @@
 # Projeto TechStock
-
+Usuário: turibio <br>
+Senha: turibio123
 
 
 ## :computer: Linguagens:
