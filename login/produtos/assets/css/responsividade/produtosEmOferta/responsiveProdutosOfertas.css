@@ -1,0 +1,66 @@
+    @media screen and (max-width:1160px) {}
+    
+    @media screen and (max-width:1024px) {
+        #header {
+            justify-content: center;
+        }
+    }
+    
+    @media screen and (max-width: 880px) {
+        #btn3 {
+            width: auto;
+        }
+        .nav {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    
+    @media screen and (min-width:300px) and (max-width:600px) {
+        .container .msg-produto p {
+            font-size: 12px;
+        }
+        .main-content .main-item img {
+            width: 70%;
+            margin-top: 3rem;
+            margin-left: 3rem;
+        }
+        .main-item .title {
+            font-size: 13px;
+        }
+        .btn-buy {
+            width: 60%
+        }
+        .btn-buy .buy {
+            font-size: 1.1rem;
+        }
+        .nav {
+            width: 80%;
+            font-size: 13px;
+        }
+    }
+    
+    @media screen and (min-width:600px) and (max-width:1000px) {
+        .main-content .main-item img {
+            width: 89%;
+            margin-top: 3rem;
+            margin-left: 9rem;
+        }
+        .main-item .title {
+            font-size: 1rem;
+        }
+    }
+    
+    @media screen and (min-width:1000px) and (max-width:1200px) {
+        .container .msg-produto p {
+            font-size: 1rem;
+        }
+        .main-content .main-item img {
+            width: 95%;
+        }
+        .main-item .title {
+            font-size: 1rem;
+        }
+    }

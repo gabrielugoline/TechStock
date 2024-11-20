@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-a11y="true"></script>
+    <title>TechStock | Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <form id="login-form">
+            <h2>Faça seu Login</h2>
+            
+            <input type="text" id="usuario" class="campo" placeholder="Entre com seu usuario">
+            <div class="linha"></div>
+            
+            <div class="senha-container">
+            <input type="password" id="senha" class="campo" placeholder="Insira sua senha">
+            <i id="toggle-password" class="fa-solid fa-eye"></i> <!-- Ícone para alternar a visibilidade -->
+            </div>
+            <div class="linha"></div>
+            
+            <input type="submit" value="Entrar">
+        </form>
+
+        <span class="subfrase">Entre com suas redes socias</span>
+        
+        <div class="sociais">
+            <div class="button-twitter">
+                <a href="#">
+                    <i class="fa-brands fa-linkedin"></i>
+                    Entre com o Linkedin
+                </a>
+            </div>
+            <div class="button-facebook">
+                <a href="#">
+                    <i class="fa-brands fa-google"></i>
+                    Entre com o Google
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Script para validação de login
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Impede o envio do formulário
+
+            // Defina o usuário e a senha esperados
+            const usuarioCorreto = "turibio";
+            const senhaCorreta = "turibio123";
+
+            // Pegue os valores dos campos
+            const usuario = document.getElementById("usuario").value;
+            const senha = document.getElementById("senha").value;
+
+            // Verifique se o usuário e a senha estão corretos
+            if (usuario === usuarioCorreto && senha === senhaCorreta) {
+                // Redireciona para outra página
+                window.location.href = "produtos/produtos.html"; // Altere para a página desejada
+            } else {
+                // Exibe um alerta de erro se as credenciais estiverem incorretas
+                alert("Usuário ou senha incorretos. Tente novamente.");
+            }
+        });
+    </script>
+        <script>
+            // Script para alternar visibilidade da senha
+            const togglePassword = document.getElementById("toggle-password");
+            const senhaField = document.getElementById("senha");
+    
+            togglePassword.addEventListener("click", function() {
+                // Verifique o tipo atual e altere
+                const type = senhaField.type === "password" ? "text" : "password";
+                senhaField.type = type;
+                
+                // Alterna o ícone conforme o estado
+                if (type === "password") {
+                    togglePassword.classList.remove("fa-eye-slash");
+                    togglePassword.classList.add("fa-eye");
+                } else {
+                    togglePassword.classList.remove("fa-eye");
+                    togglePassword.classList.add("fa-eye-slash");
+                }
+            });
+        </script>
+        
+</body>
+</html>
